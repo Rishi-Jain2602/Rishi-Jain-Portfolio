@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/css/main.596d0a7b.css",
+    "main.js": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/main.7cf23e32.js",
+    "static/js/453.1407b060.chunk.js": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js",
+    "index.html": "/Rishi-Jain2602/Rishi-Jain-Portfolio/index.html",
+    "main.596d0a7b.css.map": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/css/main.596d0a7b.css.map",
+    "main.7cf23e32.js.map": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/main.7cf23e32.js.map",
+    "453.1407b060.chunk.js.map": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.596d0a7b.css",
+    "static/js/main.7cf23e32.js"
+  ]
+}
