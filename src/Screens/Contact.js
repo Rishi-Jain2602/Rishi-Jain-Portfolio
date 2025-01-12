@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Contact.css'
+import { Link } from 'react-router-dom';
 export default function Contact() {
     const [info,setinfo] = useState({name:"",email:"",message:""});
 
@@ -52,21 +53,21 @@ export default function Contact() {
             <div className='container social-media-container'>
                 <p className="social-title">Reach out to me:</p>
                 <div className="social-icons">
-                    <a href="https://www.linkedin.com/in/rishi-jain-5a79b7223/" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+                    <Link to="https://www.linkedin.com/in/rishi-jain-5a79b7223/" target="_blank" rel="noopener noreferrer" className="social-icon-link">
                         <i className="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:rishijainai262003@gmail.com" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+                    </Link>
+                    <Link to="mailto:rishijainai262003@gmail.com" target="_blank" rel="noopener noreferrer" className="social-icon-link">
                         <i className="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.instagram.com/rishi_jain_262003/" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+                    </Link>
+                    <Link to="https://www.instagram.com/rishi_jain_262003/" target="_blank" rel="noopener noreferrer" className="social-icon-link">
                         <i className="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/beingRJ262003" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+                    </Link>
+                    <Link to="https://x.com/beingRJ262003" target="_blank" rel="noopener noreferrer" className="social-icon-link">
                         <i className="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://github.com/Rishi-Jain2602" target="_blank" rel="noopener noreferrer" className="social-icon-link">
+                    </Link>
+                    <Link to="https://github.com/Rishi-Jain2602" target="_blank" rel="noopener noreferrer" className="social-icon-link">
                         <i className="fab fa-github"></i>
-                    </a>
+                    </Link>
 
                 </div>
             </div>
