@@ -17,14 +17,14 @@ app.post('/send-email', async (req, res) => {
         port: 587,
         secure: false,
         auth: {
-            user: '836141001@smtp-brevo.com',
-            pass: '5hCF2NUJWD30sTRb'
+            user: '836###1001@smtp-brevo.com',
+            pass: '###############'
         }
     });
 
     const mailOptions = {
         from: email,
-        to: 'rj1016743@gmail.com', 
+        to: '#####', 
         subject: `Message from ${name} via Portfolio website`,
         text: message,
     };
