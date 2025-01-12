@@ -43,3 +43,24 @@ body {
     font-weight: 700;
     color: #00d4ff !important;
 }
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center; /* Center items on mobile */
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    
+    /* Make the navbar background slightly darker on smaller screens */
+    .navbar {
+        background: linear-gradient(45deg, #0d1618, #333);
+    }
+    
+    /* Adjust the padding of the navbar brand on smaller screens */
+    .navbar-brand {
+        font-size: 22px;
+    }
+}
