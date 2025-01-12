@@ -1,0 +1,43 @@
+/* General styles for the card */
+.card {
+    display: flex;
+    flex-direction: column; /* Stack image and content by default */
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styles for the image */
+.card-img-left {
+    width: 100%; /* Full width of card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+    margin-bottom: 20px; /* Space below image */
+}
+
+/* Text alignment for smaller screens */
+.card-body {
+    text-align: center; /* Center-align the text */
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row; /* Side-by-side layout for larger screens */
+        align-items: center;
+    }
+
+    .card-img-left {
+        width: 300px; /* Fixed width for the image */
+        height: 200px;
+        margin-bottom: 0; /* Remove bottom margin */
+        margin-right: 20px; /* Add right margin */
+    }
+
+    .card-body {
+        text-align: left; /* Left-align text for larger screens */
+    }
+}

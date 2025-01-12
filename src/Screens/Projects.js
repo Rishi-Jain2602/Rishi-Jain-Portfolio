@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './styles/Projects.css'
 export default function Projects() {
   return (
     <>

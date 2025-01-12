@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Contact.css'
+import './styles/Contact.css'
 import { Link } from 'react-router-dom';
 export default function Contact() {
     const [info,setinfo] = useState({name:"",email:"",message:""});

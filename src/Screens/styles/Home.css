@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+    .home-card {
+      flex-direction: column; /* Stack image and text vertically */
+      align-items: center;
+      text-align: center; /* Center-align text */
+    }
+
+    .card-img-left {
+      width: 80%; /* Adjust image width for smaller screens */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .card-body {
+      padding: 0 15px; /* Add some padding for content */
+    }
+
+    .card-title {
+      font-size: 2rem; /* Adjust font size */
+    }
+
+    .card-text {
+      font-size: 1rem; /* Adjust font size */
+    }
+  }
