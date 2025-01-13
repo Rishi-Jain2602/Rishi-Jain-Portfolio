@@ -1,21 +1,29 @@
 import React, { useState } from 'react'
 import './styles/Contact.css'
 import { Link } from 'react-router-dom';
+
 export default function Contact() {
     const [info,setinfo] = useState({name:"",email:"",message:""});
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/send-email', {
+            const response = await fetch(`https://rishi-jain-portfolio-1.onrender.com/send-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(info),
             });
-            const result = await response.text();
-            alert(result);
+            if (response.status === 200){
+                const result = await response.text();
+                alert(result);
+                setinfo({name:"",email:"",message:""});
+            }else {
+                const errorResult = await response.text();
+                alert('Failed to send email: ' + errorResult);
+            }
+            
         } catch (error) {
             alert('Error sending email: ' + error.message);
         }
@@ -33,15 +41,15 @@ export default function Contact() {
                 <form  className="contact-form" onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Full Name</label>
-                        <input type="text" className="form-control" id="name" name="name" onChange={onChange} placeholder="Your Full Name" required />
+                        <input type="text" className="form-control" id="name" value={info.name} name="name" onChange={onChange} placeholder="Your Full Name" required />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">Email Address</label>
-                        <input type="email" className="form-control" id="email" name="email" onChange={onChange} placeholder="name@example.com" required />
+                        <input type="email" className="form-control" id="email" value={info.email} name="email" onChange={onChange} placeholder="name@example.com" required />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="message" className="form-label">Message</label>
-                        <textarea className="form-control" id="message" name="message" onChange={onChange} rows="4" placeholder="Your Message" required></textarea>
+                        <textarea className="form-control" id="message" name="message" value={info.message} onChange={onChange} rows="4" placeholder="Your Message" required></textarea>
                     </div>
                     <div className="submit-btn-container">
                         <button type="submit" className="btn submit-btn">Submit</button>
