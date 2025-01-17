@@ -1,7 +1,7 @@
 /* General styling for the container */
 .container {
     padding: 20px;
-    /* background-color: #f5f5f5; */
+    background-color: #f5f5f5;
     color: #333;
   }
   
@@ -23,14 +23,14 @@
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
   
-  /* Image styles */
+  /* Image styles
   .card-img-left {
     width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
     margin-right: 20px;
-  }
+  } */
   
   /* Video styles */
   .card video {
@@ -70,13 +70,15 @@
     .card {
       flex-direction: column;
       text-align: center;
+      padding: auto;
+      margin: auto;
     }
   
     .card-img-left,
     .card video {
       margin: 0 auto 20px auto;
-      width: 90%; /* Adjust width to fit smaller screens */
-      height: auto; /* Maintain aspect ratio */
+      width: 90%; 
+      height: auto; 
     }
   
     .card-title {

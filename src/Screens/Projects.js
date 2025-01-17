@@ -7,27 +7,7 @@ export default function Projects() {
       <div className="container py-5" style={{ backgroundColor: '#f5f5f5', color: '#333' }}>
 
         {/* Wordle Game Card */}
-        <div
-          className="card shadow-sm mb-5"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '20px',
-            borderRadius: '15px',
-            backgroundColor: '#fff',
-            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-          }}
-        >
+        <div className="card shadow-sm mb-5" >
           <img
             src="https://www.nytimes.com/games-assets/v2/assets/wordle/wordle_og_1200x630.png"
             className="card-img-left mx-4"
@@ -41,13 +21,12 @@ export default function Projects() {
             }}
           />
           <div className="card-body">
-            <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>Wordle Game</h5>
-            <p className="card-subtitle mb-2 text-muted">Currently Working on it...</p>
-            <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
-              A bilingual word guessing game built using FastAPI and Streamlit, supporting both English and Hindi. The game provides feedback based on correct letter positions and similarity scores for Hindi words, utilizing WordNet, IndoWordNet, and IndicBERT for contextual search.
+            <h5 className="card-title">Wordle Game</h5>
+            <p className="card-text" >
+            A bilingual word guessing game built using <strong>FastAPI and React.js</strong>, supporting English, Hindi, and various other languages. The game evaluates guesses by providing similarity scores and common keywords based on the descriptions of the guessed word and the target word. It also offers hints for the target word, utilizing <strong> WordNet and MistralAPI </strong>for contextual search to enhance the guessing experience.
               <br />
               <strong>How to Play:</strong>
-              <br />- Choose your preferred language (English or Hindi).
+              <br />- Choose your preferred language (English, Hindi or other).
               <br />- Enter a word in the selected language and category.
               <br />- Click the Submit button to receive feedback.
               <br />- You have a total of 5 attempts to guess the word correctly.
@@ -67,33 +46,13 @@ export default function Projects() {
         </div>
 
         {/* AI Image Analysis Pipeline Card */}
-        <div
-          className="card shadow-sm mb-5"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '20px',
-            borderRadius: '15px',
-            backgroundColor: '#fff',
-            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-          }}
-        >
+        <div className="card shadow-sm mb-5" >
           <video
             className="card-img-left mx-4 my-4"
             controls
             style={{
-              width: '350px',
-              height: '350px',
+              width: '300px',
+              height: '300px',
               objectFit: 'cover',
               borderRadius: '10px',
               marginRight: '20px',
@@ -106,9 +65,8 @@ export default function Projects() {
             Your browser does not support the video tag.
           </video>
           <div className="card-body">
-            <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>AI Image Analysis Pipeline</h5>
-            <p className="card-subtitle mb-2 text-muted">Currently Working on it...</p>
-            <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
+            <h5 className="card-title" >AI Image Analysis Pipeline</h5>
+            <p className="card-text" >
               An AI Image Analysis Pipeline automates image processing by detecting objects, segmenting them, extracting features, and generating textual descriptions or structured data.
               <br />
               <strong>Tools & Models Used:</strong>
@@ -134,41 +92,23 @@ export default function Projects() {
         {/* FaceFusion Card */}
         <div
           className="card shadow-sm mb-5"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '20px',
-            borderRadius: '15px',
-            backgroundColor: '#fff',
-            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-          }}
+          
+          
         >
           <img
             src="https://chatgptdemo.com/wp-content/uploads/2024/10/facefusion-1.jpg"
             className="card-img-left mx-4"
             alt="FaceFusion"
             style={{
-              width: '150px',
-              height: '150px',
+              width: '250px',
+              height: '250px',
               objectFit: 'cover',
-              marginRight: '20px',
-              borderRadius: '10px',
             }}
           />
           <div className="card-body">
-            <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>FaceFusion</h5>
+            <h5 className="card-title" >FaceFusion</h5>
             <p className="card-subtitle mb-2 text-muted">Currently Working on it...</p>
-            <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
+            <p className="card-text" >
               FaceFusion is an AI-powered tool that allows seamless face and object swapping in images. By leveraging models like Stable Diffusion for image generation and face-swapping technologies, it automatically detects and replaces human faces with AI-generated content based on a prompt.
             </p>
             <div>
