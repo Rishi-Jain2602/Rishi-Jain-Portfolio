@@ -1,26 +1,126 @@
-@media (max-width: 768px) {
-    .home-card {
-      flex-direction: column; /* Stack image and text vertically */
-      align-items: center;
-      text-align: center; /* Center-align text */
-    }
+.main-container {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .card-img-left {
-      width: 80%; /* Adjust image width for smaller screens */
-      height: auto; /* Maintain aspect ratio */
-      margin-right: 0; /* Remove right margin */
-      margin-bottom: 20px; /* Add space below the image */
-    }
+.content-container {
+  max-width: 1200px;
+  padding: 2rem;
+  width: 100%;
+}
 
-    .card-body {
-      padding: 0 15px; /* Add some padding for content */
-    }
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  gap: 2rem;
+}
 
-    .card-title {
-      font-size: 2rem; /* Adjust font size */
-    }
+.profile-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
 
-    .card-text {
-      font-size: 1rem; /* Adjust font size */
-    }
+.profile-content {
+  text-align: center;
+}
+
+.profile-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.profile-subtitle {
+  color: #00d4ff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-text {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.resume-button {
+  background-color: #00d4ff;
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.resume-button:hover {
+  background-color: #0099cc;
+}
+
+.profile-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2); /* Glowing effect using your blue accent color */
+}
+
+/* Add glow effect to the image */
+.profile-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
+}
+
+/* Add hover effect to the content section */
+.profile-content {
+  transition: transform 0.3s ease;
+}
+
+.profile-content:hover {
+  transform: translateY(-5px);
+}
+
+.content-container {
+  transition: background-color 0.3s ease;
+}
+
+.content-container:hover {
+  background-color: rgba(0, 212, 255, 0.03);
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .profile-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
   }
+
+  .profile-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 40px 0 0; /* Reset the auto margins and only add right margin */
+  }
+
+  .profile-content {
+    text-align: left;
+  }
+}
