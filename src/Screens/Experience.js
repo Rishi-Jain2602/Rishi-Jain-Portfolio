@@ -9,16 +9,7 @@ export default function Experience() {
         {/* First Experience Card */}
         <div
           className="card shadow-sm mb-5"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '20px',
-            borderRadius: '15px',
-            backgroundColor: '#fff',
-            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          }}
+          
           onMouseOver={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
             e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
@@ -62,16 +53,7 @@ export default function Experience() {
         {/* Second Experience Card */}
         <div
           className="card shadow-sm"
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: '20px',
-            borderRadius: '15px',
-            backgroundColor: '#fff',
-            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
-            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          }}
+          
           onMouseOver={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
             e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
