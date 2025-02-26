@@ -21,10 +21,16 @@ export default function Education() {
                         <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>National Institute of Technology, Karnataka</h5>
                         <p className="card-subtitle mb-2 text-muted">Dec. 2021 - April 2025</p>
                         <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
-                            I am currently pursuing a B.Tech in Civil Engineering with AI Minors at NITK, where I am gaining a strong foundation in both traditional engineering principles and cutting-edge technologies. <br />
+                            I am currently pursuing a <strong>B.Tech in Civil Engineering with AI Minors at NITK</strong>, where I am gaining a strong foundation in both traditional engineering principles and cutting-edge technologies. <br />
                             <strong>Activities and societies:</strong> <br />
-                            - Executive member of IEEE NITK <br />
-                            - Internship Coordinator at CDC NITK 2023
+                            <ul>
+                                <li>
+                                    Executive member of IEEE NITK
+                                </li>
+                                <li>
+                                    Internship Coordinator at CDC NITK 2023
+                                </li>
+                            </ul>
                         </p>
                     </div>
                 </div>
