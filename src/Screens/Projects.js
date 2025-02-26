@@ -6,6 +6,112 @@ export default function Projects() {
     <>
       <div className="container py-5" style={{ backgroundColor: '#f5f5f5', color: '#333' }}>
 
+        {/* LinkRefine */}
+        <div className="card shadow-sm mb-5" >
+          <img
+            src={require('./static/LinkedIn review systemGen AI.webp')}
+            className="card-img-left mx-4"
+            alt="Wordle"
+            style={{
+              width: '275px',
+              height: '200px',
+              objectFit: 'contain',
+              marginRight: '20px',
+              borderRadius: '10px',
+            }}
+          />
+          <div className="card-body">
+            <h5 className="card-title">LinkRefine: Polish Your LinkedIn Presence</h5>
+            <p className="card-text" >
+
+            <strong>LinkRefine</strong> is a web application that refines and optimizes LinkedIn profiles by fetching and analyzing data such as the headline, about section, work experience, and skills. <br />
+
+<ul>
+  <li>Offers AI-driven suggestions to improve profile sections, helping professionals present their expertise more effectively and attract recruiters.</li>
+  <li>Streamlines the profile enhancement process by providing actionable insights from the analysis of the LinkedIn profile URL.</li>
+  <li>Powered by <strong>FastAPI</strong> and <strong>LangChain</strong>—leveraging <strong>Mistral LLM</strong> for profile optimization and <strong>LLAMA 3B</strong> for advanced image analysis.</li>
+</ul>
+
+            </p>
+            <div>
+              <Link
+                to="https://github.com/Rishi-Jain2602/LinkRefine"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
+              >
+                Github Link
+              </Link>
+
+              <Link
+                to="https://link-refine-five.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary mx-3"
+                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
+              >
+                Live Link
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* AskSmart */}
+        <div className="card shadow-sm mb-5" >
+          <img
+            src={require('./static/AskSmart.webp')}
+            className="card-img-left mx-4"
+            alt="Wordle"
+            style={{
+              width: '300px',
+              height: '200px',
+              objectFit: 'contain',
+              marginRight: '20px',
+              borderRadius: '10px',
+            }}
+          />
+          <div className="card-body">
+            <h5 className="card-title">AskSmart: A RAG-Powered Intelligent Query System</h5>
+            <p className="card-text" >
+              <ul>
+                <li><strong>AskSmart</strong> is a powerful document retrieval system that allows you to upload and process various formats such as <strong>PDF, DOCX, JSON, and TXT</strong>. Our advanced <strong>AI technology</strong> retrieves relevant information and generates context-aware responses to your queries.
+                </li>
+
+                <li>
+                  Leveraged <strong>Weaviate</strong> as a vector store to index document chunks, resulting in a <strong>30%</strong> improvement in response times compared to other vector store methods.
+                </li>
+                <li>
+                  Delivered a full-stack solution with a <strong>FastAPI backend </strong> and a responsive <strong>React frontend</strong>, ensuring a smooth, context-aware user experience.
+                </li>
+              </ul>
+
+
+            </p>
+            <div>
+              <Link
+                to="https://github.com/Rishi-Jain2602/AskSmart"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
+              >
+                Github Link
+              </Link>
+
+              <Link
+                to="https://ask-smart-git-main-rishi-jain2602s-projects.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary mx-3"
+                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
+              >
+                Live Link
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* ConvAI */}
         <div className="card shadow-sm mb-5" >
           <img
@@ -30,9 +136,10 @@ export default function Projects() {
 
 
               <strong>1. Voice Interaction:</strong> Users engage via voice, with transcriptions displayed in the chat. <br />
-              <strong>2. LLM-Powered Suggestions: </strong> The AI analyzes conversations and offers tips on clarity, tone, and how to improve responses. <br />
-              <strong>3. Improvement Feedback:</strong> Detailed suggestions are provided post-conversation, focusing on tone, clarity, and completeness. <br />
-              <strong>4. Full Stack Integration:</strong> Built with <strong>React.js on the frontend and FastAPI for the backend</strong>, ensuring seamless display of suggestions with proper formatting.
+              <strong>2. LLM-Powered Feedback:</strong> The AI analyzes conversations and provides real-time tips on clarity, tone, and response improvement, with detailed suggestions post-conversation.
+
+            <br />
+              <strong>3. Full Stack Integration:</strong> Built with <strong>FastAPI backend </strong> and a responsive <strong>React frontend</strong>, ensuring seamless display of suggestions with proper formatting.
             </p>
             <div>
               <Link
@@ -43,6 +150,16 @@ export default function Projects() {
                 style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
               >
                 Github Link
+              </Link>
+
+              <Link
+                to="https://conversational-ai-coach.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary mx-3"
+                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
+              >
+                Live Link
               </Link>
             </div>
           </div>
