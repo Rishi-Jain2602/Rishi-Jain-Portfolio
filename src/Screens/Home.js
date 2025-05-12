@@ -8,7 +8,7 @@ export default function Home() {
         <div className="content-container">
           <div className="profile-card">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQFcR_yanjjhrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696502980766?e=1742428800&v=beta&t=YFO0zODaUJketdfl6atNNRhqdFyfFr95CiBMvW90h_0"
+              src={require('./static/Rishi Jain.jpeg')}
               className="card-img-left"
               alt="Rishi Jain"
               style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '50%', marginRight: '40px' }}
