@@ -1,250 +1,138 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles/Projects.css'
+
+const projects = [
+  {
+    title: 'LinkRefine: Polish Your LinkedIn Presence',
+    image: require('./static/LinkedIn review systemGen AI.webp'),
+    stack: ['FastAPI', 'LangChain', 'Mistral LLM', 'LLAMA 3B'],
+    bullets: [
+      <><strong>LinkRefine</strong> is a web app that refines LinkedIn profiles by fetching and analyzing headline, about, work experience, and skills sections.</>,
+      <>Offers <strong>AI-driven suggestions</strong> to improve profile sections and attract recruiters.</>,
+      <>Powered by <strong>FastAPI</strong> and <strong>LangChain</strong> — leveraging <strong>Mistral LLM</strong> for optimization and <strong>LLAMA 3B</strong> for image analysis.</>,
+    ],
+    github: 'https://github.com/Rishi-Jain2602/LinkRefine',
+    live: 'https://link-refine-five.vercel.app/',
+  },
+  {
+    title: 'AskSmart: RAG-Powered Intelligent Query System',
+    image: require('./static/AskSmart.webp'),
+    stack: ['FastAPI', 'Weaviate', 'React.js', 'LangChain'],
+    bullets: [
+      <>Powerful document retrieval for <strong>PDF, DOCX, JSON, TXT</strong> — generates context-aware answers.</>,
+      <>Leveraged <strong>Weaviate</strong> as a vector store for <strong>30% faster</strong> response times.</>,
+      <>Full-stack with <strong>FastAPI backend</strong> and responsive <strong>React frontend</strong>.</>,
+    ],
+    github: 'https://github.com/Rishi-Jain2602/AskSmart',
+    live: 'https://ask-smart-git-main-rishi-jain2602s-projects.vercel.app/',
+  },
+  {
+    title: 'ConvAI: Conversational AI Coach',
+    image: require('./static/ConvAI.JPG'),
+    stack: ['FastAPI', 'Mistral AI', 'React.js', 'WebSockets'],
+    bullets: [
+      <>Voice-based chat interface integrated with <strong>Mistral AI</strong> for real-time conversation improvement.</>,
+      <><strong>LLM-powered feedback</strong> on clarity, tone, and response quality post-conversation.</>,
+      <>Full-stack with <strong>FastAPI</strong> backend and <strong>React</strong> frontend.</>,
+    ],
+    github: 'https://github.com/Rishi-Jain2602/Conversational-AI-Coach',
+    live: 'https://conversational-ai-coach.vercel.app/',
+  },
+  {
+    title: 'Wordle Game — Multilingual',
+    image: require('./static/wordle game.JPG'),
+    stack: ['FastAPI', 'React.js', 'WordNet', 'MistralAPI', 'PostgreSQL'],
+    bullets: [
+      <>Bilingual word guessing game in <strong>English, Hindi,</strong> and more languages.</>,
+      <>Evaluates guesses with similarity scores using <strong>WordNet + MistralAPI</strong>.</>,
+      <>5 attempts with hints — powered by <strong>FastAPI + React.js</strong>.</>,
+    ],
+    github: 'https://github.com/Rishi-Jain2602/Wordle',
+    live: null,
+  },
+  {
+    title: 'AI Image Analysis Pipeline',
+    image: require('./static/AI Img Analysis pipeline.webp'),
+    stack: ['Mask R-CNN', 'YOLO', 'BLIP', 'BART', 'HuggingFace'],
+    bullets: [
+      <>Automates image processing: <strong>object detection, segmentation, feature extraction</strong>, and captioning.</>,
+      <>Uses <strong>YOLO</strong> for detection, <strong>BLIP</strong> for captioning, <strong>BART</strong> for summarization.</>,
+    ],
+    github: 'https://github.com/Rishi-Jain2602/AI-Image-Analysis-Pipeline',
+    live: null,
+  },
+]
+
 export default function Projects() {
   return (
-    <>
-      <div className="container py-5" style={{ backgroundColor: '#f5f5f5', color: '#333' }}>
+    <div className="projects-page">
+      <div className="projects-inner">
 
-        {/* LinkRefine */}
-        <div className="card shadow-sm mb-5" >
-          <img
-            src={require('./static/LinkedIn review systemGen AI.webp')}
-            className="card-img-left mx-4"
-            alt="Wordle"
-            style={{
-              width: '275px',
-              height: '200px',
-              objectFit: 'contain',
-              marginRight: '20px',
-              borderRadius: '10px',
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">LinkRefine: Polish Your LinkedIn Presence</h5>
-            <p className="card-text" >
-
-            <strong>LinkRefine</strong> is a web application that refines and optimizes LinkedIn profiles by fetching and analyzing data such as the headline, about section, work experience, and skills. <br />
-
-<ul>
-  <li>Offers AI-driven suggestions to improve profile sections, helping professionals present their expertise more effectively and attract recruiters.</li>
-  <li>Streamlines the profile enhancement process by providing actionable insights from the analysis of the LinkedIn profile URL.</li>
-  <li>Powered by <strong>FastAPI</strong> and <strong>LangChain</strong>—leveraging <strong>Mistral LLM</strong> for profile optimization and <strong>LLAMA 3B</strong> for advanced image analysis.</li>
-</ul>
-
-            </p>
-            <div>
-              <Link
-                to="https://github.com/Rishi-Jain2602/LinkRefine"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Github Link
-              </Link>
-
-              <Link
-                to="https://link-refine-five.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary mx-3"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Live Link
-              </Link>
-            </div>
-          </div>
+        {/* ── Header ────────────────────────────────── */}
+        <div className="proj-header">
+          <p className="proj-eyebrow">Selected Work</p>
+          <h2 className="proj-heading">
+            Pro<span>jects</span>
+          </h2>
         </div>
 
-        {/* AskSmart */}
-        <div className="card shadow-sm mb-5" >
-          <img
-            src={require('./static/AskSmart.webp')}
-            className="card-img-left mx-4"
-            alt="Wordle"
-            style={{
-              width: '300px',
-              height: '200px',
-              objectFit: 'contain',
-              marginRight: '20px',
-              borderRadius: '10px',
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">AskSmart: A RAG-Powered Intelligent Query System</h5>
-            <p className="card-text" >
-              <ul>
-                <li><strong>AskSmart</strong> is a powerful document retrieval system that allows you to upload and process various formats such as <strong>PDF, DOCX, JSON, and TXT</strong>. Our advanced <strong>AI technology</strong> retrieves relevant information and generates context-aware responses to your queries.
-                </li>
+        {/* ── List ──────────────────────────────────── */}
+        <div className="proj-list">
+          {projects.map((proj, i) => (
+            <div className="proj-card" key={i}>
 
-                <li>
-                  Leveraged <strong>Weaviate</strong> as a vector store to index document chunks, resulting in a <strong>30%</strong> improvement in response times compared to other vector store methods.
-                </li>
-                <li>
-                  Delivered a full-stack solution with a <strong>FastAPI backend </strong> and a responsive <strong>React frontend</strong>, ensuring a smooth, context-aware user experience.
-                </li>
-              </ul>
+              {/* Image */}
+              <div className="proj-img-wrap">
+                <img src={proj.image} alt={proj.title} />
+              </div>
 
+              {/* Body */}
+              <div className="proj-body">
+                <p className="proj-number">0{i + 1}</p>
+                <h3 className="proj-title">{proj.title}</h3>
 
-            </p>
-            <div>
-              <Link
-                to="https://github.com/Rishi-Jain2602/AskSmart"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Github Link
-              </Link>
+                <ul className="proj-bullets">
+                  {proj.bullets.map((b, j) => (
+                    <li key={j}><span>{b}</span></li>
+                  ))}
+                </ul>
 
-              <Link
-                to="https://ask-smart-git-main-rishi-jain2602s-projects.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary mx-3"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Live Link
-              </Link>
+                {/* Tech stack */}
+                <div className="proj-stack">
+                  {proj.stack.map((t) => (
+                    <span className="proj-tag" key={t}>{t}</span>
+                  ))}
+                </div>
+
+                {/* Actions */}
+                <div className="proj-actions">
+                  <Link
+                    to={proj.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="proj-btn proj-btn-primary"
+                  >
+                    ↗ GitHub
+                  </Link>
+                  {proj.live && (
+                    <Link
+                      to={proj.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="proj-btn proj-btn-ghost"
+                    >
+                      ⬡ Live Demo
+                    </Link>
+                  )}
+                </div>
+              </div>
+
             </div>
-          </div>
-        </div>
-
-        {/* ConvAI */}
-        <div className="card shadow-sm mb-5" >
-          <img
-            src={require('./static/ConvAI.JPG')}
-            className="card-img-left mx-4"
-            alt="Wordle"
-            style={{
-              width: '300px',
-              height: '200px',
-              objectFit: 'contain',
-              marginRight: '20px',
-              borderRadius: '10px',
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">ConvAI: Conversational AI Coach</h5>
-            <p className="card-text" >
-
-              This project is a web-based voice chat interface integrated with <strong> Mistral AI </strong> to provide real-time conversational improvement suggestions. It supports voice-based conversations between two users, such as in an interview scenario.
-              <br />
-              <strong>Key Features: <br /></strong>
-
-
-              <strong>1. Voice Interaction:</strong> Users engage via voice, with transcriptions displayed in the chat. <br />
-              <strong>2. LLM-Powered Feedback:</strong> The AI analyzes conversations and provides real-time tips on clarity, tone, and response improvement, with detailed suggestions post-conversation.
-
-            <br />
-              <strong>3. Full Stack Integration:</strong> Built with <strong>FastAPI backend </strong> and a responsive <strong>React frontend</strong>, ensuring seamless display of suggestions with proper formatting.
-            </p>
-            <div>
-              <Link
-                to="https://github.com/Rishi-Jain2602/Conversational-AI-Coach"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Github Link
-              </Link>
-
-              <Link
-                to="https://conversational-ai-coach.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary mx-3"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Live Link
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Wordle Game Card */}
-        <div className="card shadow-sm mb-5" >
-          <img
-            src={require('./static/wordle game.JPG')}
-            className="card-img-left mx-4"
-            alt="Wordle"
-            style={{
-              width: '300px',
-              height: '200px',
-              objectFit: 'contain',
-              marginRight: '20px',
-              borderRadius: '10px',
-            }}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Wordle Game</h5>
-            <p className="card-text" >
-              A bilingual word guessing game built using <strong>FastAPI and React.js</strong>, supporting English, Hindi, and various other languages. The game evaluates guesses by providing similarity scores and common keywords based on the descriptions of the guessed word and the target word. It also offers hints for the target word, utilizing <strong> WordNet and MistralAPI </strong>for contextual search to enhance the guessing experience.
-              <br />
-              <strong>How to Play:</strong>
-              <br /><strong>1.</strong> Choose your preferred language: <strong>(English, Hindi or other)</strong>.
-              <br /><strong>2.</strong> Enter a word in the selected language and category.
-              <br /><strong>3.</strong> Click the Submit button to receive feedback.
-              <br /><strong>4.</strong> You have a total of <strong>5 attempts</strong> to guess the word correctly.
-            </p>
-            <div>
-              <Link
-                to="https://github.com/Rishi-Jain2602/Wordle"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Github Link
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* AI Image Analysis Pipeline Card */}
-        <div className="card shadow-sm mb-5" >
-          <img
-            src={require('./static/AI Img Analysis pipeline.webp')}
-            className="card-img-left mx-4"
-            alt="Wordle"
-            style={{
-              width: '300px',
-              height: '200px',
-              objectFit: 'contain',
-              marginRight: '20px',
-              borderRadius: '10px',
-            }}
-          />
-
-          <div className="card-body">
-            <h5 className="card-title" >AI Image Analysis Pipeline</h5>
-            <p className="card-text" >
-              An AI Image Analysis Pipeline automates image processing by detecting objects, segmenting them, extracting features, and generating textual descriptions or structured data.
-              <br />
-              <strong>Tools & Models Used:</strong>
-              <br /><strong>1. Image Segmentation:</strong> Mask R-CNN
-              <br /><strong>2. Feature Extraction:</strong> YOLO (Hugging Face Model: hustvl/yolos-tiny)
-              <br /><strong>3. Text/Data Extraction from Objects:</strong> BLIP (Hugging Face Model: Salesforce/blip-image-captioning-large)
-              <br /><strong>4. Summarization:</strong> BART (Hugging Face Model: facebook/bart-large-cnn)
-            </p>
-            <div>
-              <Link
-                to="https://github.com/Rishi-Jain2602/AI-Image-Analysis-Pipeline"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ backgroundColor: '#00d4ff', borderColor: '#00d4ff' }}
-              >
-                Github Link
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
 
       </div>
-    </>
-  );
+    </div>
+  )
 }

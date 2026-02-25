@@ -1,64 +1,80 @@
 import React from 'react'
 import './styles/Education.css'
+
 export default function Education() {
-    return (
-        <>
-            <div className="container py-3" style={{ backgroundColor: '#f5f5f5', color: '#333' }}>
-                <div className="card shadow-sm mb-5" >
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/en/c/cc/NITK_Emblem.png"
-                        className="card-img-left mx-4"
-                        alt="NITK"
-                        style={{
-                            width: '300px',
-                            height: '200px',
-                            objectFit: 'contain',
-                            marginRight: '20px',
-                            borderRadius: '10px',
-                        }}
-                    />
-                    <div className="card-body">
-                        <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>National Institute of Technology, Karnataka</h5>
-                        <p className="card-subtitle mb-2 text-muted">Dec. 2021 - April 2025</p>
-                        <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
-                            I am currently pursuing a <strong>B.Tech in Civil Engineering with AI Minors at NITK</strong>, where I am gaining a strong foundation in both traditional engineering principles and cutting-edge technologies. <br />
-                            <strong>Activities and societies:</strong> <br />
-                            <ul>
-                                <li>
-                                    Executive member of IEEE NITK
-                                </li>
-                                <li>
-                                    Internship Coordinator at CDC NITK 2023
-                                </li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="container" style={{ backgroundColor: '#f5f5f5', color: '#333' }}>
-                <div className="card shadow-sm mb-5">
-                    <img
-                        src="https://www.schooldekho.org/storage/logo//3ekaidxoyx440skc44w4gg00occc8sk.jpg"
-                        className="card-img-left mx-4"
-                        alt="HHS"
-                        style={{
-                            width: '300px',
-                            height: '200px',
-                            objectFit: 'contain',
-                            marginRight: '20px',
-                            borderRadius: '10px',
-                        }}
-                    />
-                    <div className="card-body">
-                        <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>Happy Hours School, Jodhpur</h5>
-                        <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
-                            I completed my schooling at Happy Hours School, Jodhpur, scoring <strong>91.2% in 12th grade and 80% in 10th grade </strong>. Alongside academics, I enjoyed activities like art & craft and played sports such as football, badminton etc which helped me stay active and balanced.
+  return (
+    <div className="education-page">
+      <div className="education-inner">
 
-                        </p>
+        {/* ── Page header ───────────────────────────────── */}
+        <div className="edu-header">
+          <p className="edu-eyebrow">Background</p>
+          <h2 className="edu-heading">
+            Edu<span>cation</span>
+          </h2>
+        </div>
 
-                    </div>
-                </div>
+        {/* ── Timeline ──────────────────────────────────── */}
+        <div className="edu-timeline">
+
+          {/* ── NITK ────────────────────────────────────── */}
+          <div className="edu-entry">
+            <div className="edu-dot" />
+
+            <div className="edu-card">
+              <div className="edu-logo-wrap invert">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/c/cc/NITK_Emblem.png"
+                  alt="NITK"
+                />
+              </div>
+
+              <div className="edu-content">
+                <h3 className="edu-institution">National Institute of Technology, Karnataka</h3>
+                <p className="edu-period">Dec 2021 – April 2025</p>
+                <p className="edu-degree">
+                  <strong>B.Tech in Civil Engineering with AI Minors</strong> — Gaining a strong
+                  foundation in both traditional engineering principles and cutting-edge AI technologies.
+                </p>
+
+                <p className="edu-activities-label">Activities &amp; Societies</p>
+                <ul className="edu-activities">
+                  <li>Executive member of IEEE NITK</li>
+                  <li>Internship Coordinator at CDC NITK 2023</li>
+                </ul>
+              </div>
             </div>
-        </>
-    )
+          </div>
+
+          {/* ── Happy Hours School ──────────────────────── */}
+          <div className="edu-entry">
+            <div className="edu-dot" />
+
+            <div className="edu-card">
+              <div className="edu-logo-wrap">
+                <img
+                  src="https://www.schooldekho.org/storage/logo//3ekaidxoyx440skc44w4gg00occc8sk.jpg"
+                  alt="Happy Hours School"
+                />
+              </div>
+
+              <div className="edu-content">
+                <h3 className="edu-institution">Happy Hours School, Jodhpur</h3>
+                <p className="edu-degree">
+                  Completed schooling with a focus on academics, art &amp; craft, and sports —
+                  football, badminton and more — maintaining an active and balanced student life.
+                </p>
+
+                <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
+                  <span className="score-badge">12th · 91.2%</span>
+                  <span className="score-badge">10th · 80%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
 }

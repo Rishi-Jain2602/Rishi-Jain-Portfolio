@@ -1,206 +1,127 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles/Experience.css'
+
+const experiences = [
+  {
+    company: 'Polymerize',
+    role: 'Artificial Intelligence Intern',
+    period: 'March 2025',
+    periodEnd: 'Present',
+    isPresent: true,
+    logo: require('./static/Polymerize Logo.png'),
+    letterUrl: 'https://drive.google.com/file/d/1gR1qgRGKsVniMH39uD29ysqeGGAkguLh/view?usp=sharing',
+    letterLabel: 'Offer Letter',
+    stack: ['Python', 'LangChain', 'FastAPI', 'MongoDB', 'Redis'],
+    bullets: [
+      <>Developed an intelligent <strong>PDF processing pipeline</strong> that extracts, processes, and indexes content from documents — including text, tables, and images.</>,
+      <>Built a scalable <strong>Document QA API</strong> with FastAPI, enabling PDF uploads, <strong>RAG-based contextual answers</strong>, and modular chat history with async background tasks and <strong>Redis vector indexing</strong>.</>,
+    ],
+  },
+  {
+    company: 'Envigo',
+    role: 'Machine Learning Intern',
+    period: 'Sep 2024',
+    periodEnd: 'April 2025',
+    isPresent: false,
+    logo: require('./static/envigo_ltd_logo.jpeg'),
+    letterUrl: 'https://drive.google.com/file/d/1RSonnje4_WK_BbmnMDNuTk4od-e6RcfH/view?usp=sharing',
+    letterLabel: 'Experience Letter',
+    stack: ['FastAPI', 'MongoDB', 'LangChain', 'Python', 'React.js'],
+    bullets: [
+      <>Engineered a <strong>RAG application</strong> with LangChain powering chatbots for Envigo and Hertz — dynamic, context-aware responses with <strong>30% reduced response time</strong>.</>,
+      <>Architected <strong>FastAPI APIs</strong> for LLM data handling, integrated MongoDB, and built an <strong>SMTP email feature</strong> with AWS S3 Email Service.</>,
+      <>Developed an <strong>AI-driven sentiment analysis system</strong> using GPT-4o for accurate media classification and content moderation.</>,
+      <>Received a <strong>Pre-Placement Offer</strong> for outstanding performance during the internship.</>,
+    ],
+  },
+  {
+    company: 'NeetPrep',
+    role: 'Machine Learning Intern',
+    period: 'May 2024',
+    periodEnd: 'July 2024',
+    isPresent: false,
+    logo: require('./static/NeetPrep.jpg'),
+    letterUrl: 'https://drive.google.com/file/d/1UkJf-rtb4FzEQ8S9kH1mdB3dLJ1Jh7EC/view?usp=sharing',
+    letterLabel: 'Experience Letter',
+    stack: ['Python', 'LangChain', 'Flask', 'PostgreSQL'],
+    bullets: [
+      <>Integrated <strong>OpenAI GPT-3.5-turbo</strong> with LangChain and Interakt's chatbot for real-time user interactions via webhooks and API endpoints.</>,
+      <>Developed an <strong>AI-based question evaluator</strong> using Gemini 1.5 Pro to grade, correct, and explain answers.</>,
+      <>Engineered a <strong>real-time question recommender</strong> using Gemini 1.5 Pro and PostgreSQL for adaptive suggestions based on student performance analytics.</>,
+    ],
+  },
+]
 
 export default function Experience() {
   return (
-    <>
-      {/* 1st experience  */}
-      <div className="container py-5" style={{ backgroundColor: '#f5f5f5', color: '#333' }}>
-        <div
-          className="card shadow-sm"
+    <div className="experience-page">
+      <div className="experience-inner">
 
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-          }}
-        >
-          <img
-            src={require('./static/Polymerize Logo.png')}
-            alt="Polymerize"
-            className="card-img-left mx-4"
-            style={{
-              width: '200px',
-              height: '200px',
-              objectFit: 'cover',
-              borderRadius: '10px',
-              marginRight: '20px',
-              border: '2px solid #ff9800',
-            }}
-          />
-
-          <div className="card-body">
-            <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>
-              Artificial Intelligence Intern
-            </h5>
-            <p className="card-subtitle mb-2 text-muted">16th March 2025 - Present</p>
-            <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
-              <ul>
-                <li><strong>Developed</strong> an intelligent PDF processing pipeline that <strong>extracts</strong>, <strong>processes</strong>, and <strong>indexes</strong> content from documents including text, tables, and images</li>
-                <li><strong>Built</strong> a scalable document QA API with <strong>FastAPI</strong>, enabling PDF uploads, <strong>RAG-based contextual answers</strong>, and modular chat history. <strong>Integrated background tasks</strong> for async table/image extraction and <strong>Redis vector indexing</strong>.</li>
-
-              </ul>
-              <strong>Tech Stack:</strong> Python, LangChain, FastAPI, MongoDB, Redis
-
-            </p>
-
-            <Link
-              to="https://drive.google.com/file/d/1gR1qgRGKsVniMH39uD29ysqeGGAkguLh/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              style={{
-                backgroundColor: '#00d4ff',
-                borderColor: '#00d4ff',
-                color: '#fff',
-                fontWeight: '600',
-                padding: '10px 20px',
-                borderRadius: '8px',
-                fontSize: '1.1rem',
-                transition: 'background-color 0.3s ease',
-              }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = '#0099cc')}
-              onMouseOut={(e) => (e.target.style.backgroundColor = '#00d4ff')}
-            >
-              Offer Letter
-            </Link>
-
-          </div>
+        {/* ── Header ──────────────────────────────────── */}
+        <div className="exp-header">
+          <p className="exp-eyebrow">Career</p>
+          <h2 className="exp-heading">
+            Work <span>Experience</span>
+          </h2>
         </div>
 
-        {/* 2nd Experience Card */}
-        <div
-          className="card shadow-sm mb-5"
+        {/* ── Timeline ────────────────────────────────── */}
+        <div className="exp-timeline">
+          {experiences.map((exp, i) => (
+            <div className="exp-entry" key={i}>
 
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-          }}
-        >
-          <img
-            src={require('./static/envigo_ltd_logo.jpeg')}
-            alt="Envigo"
-            className="card-img-left mx-4"
-            style={{
-              width: '200px',
-              height: '200px',
-              objectFit: 'cover',
-              borderRadius: '10px',
-              marginRight: '20px',
-              border: '2px solid #00d4ff',
-            }}
-          />
+              {/* Dot */}
+              <div className={`exp-dot${exp.isPresent ? ' active' : ''}`} />
 
-          <div className="card-body">
-            <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>
-              Machine Learning Intern
-            </h5>
-            <p className="card-subtitle mb-2 text-muted">23rd September 2024 - 18th April 2025</p>
-            <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
-              <ul>
-                <li><strong>Engineered a Retrieval-Augmented Generation (RAG) application</strong> with LangChain, to power chatbots for <strong>Envigo and Hertz</strong>, enabling dynamic, context-aware responses and reducing response time by <strong>30%.</strong></li>
-                <li><strong>Architected and implemented FastAPI APIs</strong> for LLM data handling, integrated MongoDB, and implemented an <strong>SMTP email feature </strong> with <strong> AWS S3 Email Service.</strong></li>
-                <li><strong>Developed an AI-driven sentiment analysis system</strong> with customized moderation rules, leveraging <strong>GPT-4o</strong> for accurate <strong>media classification and content moderation.</strong></li>
-                <li>Received a <strong> Pre-Placement Offer </strong> from Envigo Marketing Pvt. Ltd. for outstanding performance during the internship.</li>
-              </ul>
-              <strong>Tech Stack:</strong> FastAPI, MongoDB, LangChain, Python, Reactjs
+              {/* Card */}
+              <div className="exp-card">
 
-            </p>
-            <Link
-              to="https://drive.google.com/file/d/1RSonnje4_WK_BbmnMDNuTk4od-e6RcfH/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              style={{
-                backgroundColor: '#00d4ff',
-                borderColor: '#00d4ff',
-                color: '#fff',
-                fontWeight: '600',
-                padding: '10px 20px',
-                borderRadius: '8px',
-                fontSize: '1.1rem',
-                transition: 'background-color 0.3s ease',
-              }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = '#0099cc')}
-              onMouseOut={(e) => (e.target.style.backgroundColor = '#00d4ff')}
-            >
-              Experience Letter
-            </Link>
-          </div>
+                {/* Header: logo + meta */}
+                <div className="exp-card-header">
+                  <div className="exp-logo-wrap">
+                    <img src={exp.logo} alt={exp.company} />
+                  </div>
+                  <div className="exp-meta">
+                    <p className="exp-role">{exp.role}</p>
+                    <p className="exp-company">{exp.company}</p>
+                    <p className="exp-period">
+                      {exp.period} – {exp.periodEnd}
+                      {exp.isPresent && <span className="exp-present-badge">Live</span>}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Bullets */}
+                <ul className="exp-bullets">
+                  {exp.bullets.map((b, j) => (
+                    <li key={j}><span>{b}</span></li>
+                  ))}
+                </ul>
+
+                {/* Tech stack */}
+                <div className="exp-stack">
+                  {exp.stack.map((t) => (
+                    <span className="stack-tag" key={t}>{t}</span>
+                  ))}
+                </div>
+
+                {/* Letter link */}
+                <Link
+                  to={exp.letterUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="exp-letter-btn"
+                >
+                  ↗ {exp.letterLabel}
+                </Link>
+
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* 3rd Experience Card */}
-        <div
-          className="card shadow-sm"
-
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.15)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-          }}
-        >
-          <img
-            src={require('./static/NeetPrep.jpg')}
-            alt="NEETPrep"
-            className="card-img-left mx-4"
-            style={{
-              width: '200px',
-              height: '200px',
-              objectFit: 'cover',
-              borderRadius: '10px',
-              marginRight: '20px',
-              border: '2px solid #ff9800',
-            }}
-          />
-
-          <div className="card-body">
-            <h5 className="card-title" style={{ fontSize: '1.6rem', fontWeight: '600' }}>
-              Machine Learning Intern
-            </h5>
-            <p className="card-subtitle mb-2 text-muted">1st May 2024 - 5th July 2024</p>
-            <p className="card-text" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#666' }}>
-              <ul>
-                <li><strong>Integrated OpenAI’s GPT-3.5-turbo</strong> with LangChain and Interakt’s chatbot to enhance real-time user interactions via webhooks and API endpoints.</li>
-                <li><strong>Developed an AI-based question evaluator</strong> using <strong>Gemini 1.5 Pro</strong> to grade, correct, and explain questions, improving clarity and correctness for users.</li>
-                <li><strong>Engineered a real-time question recommender</strong> using <strong>Gemini 1.5 Pro  </strong> and PostgreSQL to provide adaptive suggestions based on student performance analytics.</li>
-              </ul>
-              <strong>Tech Stack:</strong> Python, LangChain, Flask, PostgreSQL
-
-            </p>
-            <Link
-              to="https://drive.google.com/file/d/1UkJf-rtb4FzEQ8S9kH1mdB3dLJ1Jh7EC/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-              style={{
-                backgroundColor: '#00d4ff',
-                borderColor: '#00d4ff',
-                color: '#fff',
-                fontWeight: '600',
-                padding: '10px 20px',
-                borderRadius: '8px',
-                fontSize: '1.1rem',
-                transition: 'background-color 0.3s ease',
-              }}
-              onMouseOver={(e) => (e.target.style.backgroundColor = '#0099cc')}
-              onMouseOut={(e) => (e.target.style.backgroundColor = '#00d4ff')}
-            >
-              Experience Letter
-            </Link>
-          </div>
-        </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }

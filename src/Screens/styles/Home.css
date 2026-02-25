@@ -1,126 +1,278 @@
-.main-container {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --bg:      #1e2120;
+  --panel:   #1e2120;
+  --text:    #ffffff;
+  --muted:   rgba(255,255,255,0.55);
+  --border:  rgba(255,255,255,0.18);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 2.5rem;
 }
 
-.content-container {
-  max-width: 1200px;
-  padding: 2rem;
-  width: 100%;
+.nav-logo {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
 }
 
-.profile-card {
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover { opacity: 0.5; }
+
+.nav-hamburger {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: none;
-  border: none;
-  gap: 2rem;
+  gap: 5px;
+  cursor: pointer;
 }
 
-.profile-image {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
+.nav-hamburger span {
   display: block;
-  margin: 0 auto;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
 }
 
-.profile-content {
-  text-align: center;
+/* ── Split Layout ────────────────────────────────────────────── */
+.home-split {
+  display: grid;
+  grid-template-columns: 44% 1fr;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-.profile-title {
-  color: #ffffff;
-  font-size: 2.5rem;
-  font-weight: 700;
+/* ── Left: Photo ─────────────────────────────────────────────── */
+.photo-panel {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 
-.profile-subtitle {
-  color: #00d4ff;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.photo-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(100%);
+  animation: photoReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.profile-text {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  color: #ffffff;
-  margin-bottom: 2rem;
+@keyframes photoReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
 }
 
-.resume-button {
-  background-color: #00d4ff;
-  color: #1a1a1a;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+/* ── Right: Content Panel ────────────────────────────────────── */
+.content-panel {
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4.5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Page number */
+.page-number {
+  position: absolute;
+  bottom: 2rem;
+  right: 2.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+/* ── Headline block ──────────────────────────────────────────── */
+.headline-wrapper {
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+/* Horizontal rule — sits beside the first line */
+.headline-rule {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  width: 52%;
+  height: 1px;
+  background: var(--border);
+  animation: ruleIn 0.9s 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-origin: left;
+}
+
+@keyframes ruleIn {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+
+.headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4.5rem, 8.5vw, 8.5rem);
+  line-height: 0.88;
+  letter-spacing: 0.015em;
+  color: var(--text);
+  animation: fadeUp 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Subtitle / role ─────────────────────────────────────────── */
+.role-line {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 1.1rem 0 1.8rem;
+  animation: fadeUp 0.8s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Bio ─────────────────────────────────────────────────────── */
+.bio {
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 430px;
+  margin-bottom: 2.75rem;
+  font-weight: 300;
+  animation: fadeUp 0.8s 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── CTA Row ─────────────────────────────────────────────────── */
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeUp 0.8s 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Solid "Explore Now" style button */
+.btn-primary {
   display: inline-block;
+  padding: 0.9em 2.2em;
+  background: var(--text);
+  color: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
   text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
-.resume-button:hover {
-  background-color: #0099cc;
+.btn-primary:hover {
+  background: transparent;
+  color: var(--text);
+  outline: 1px solid var(--text);
+  transform: translateY(-2px);
 }
 
-.profile-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* "Play Video" link */
+.btn-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
-.profile-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2); /* Glowing effect using your blue accent color */
+.btn-play:hover { opacity: 0.55; }
+
+.play-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-/* Add glow effect to the image */
-.profile-image {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.play-circle svg {
+  fill: var(--bg);
+  width: 13px;
+  height: 13px;
+  margin-left: 3px;
 }
 
-.profile-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
-}
+/* ── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  html, body { overflow: auto; }
 
-/* Add hover effect to the content section */
-.profile-content {
-  transition: transform 0.3s ease;
-}
+  .navbar { padding: 1rem 1.25rem; }
+  .nav-links { display: none; }
 
-.profile-content:hover {
-  transform: translateY(-5px);
-}
-
-.content-container {
-  transition: background-color 0.3s ease;
-}
-
-.content-container:hover {
-  background-color: rgba(0, 212, 255, 0.03);
-}
-
-/* Desktop styles */
-@media (min-width: 768px) {
-  .profile-card {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
+  .home-split {
+    grid-template-columns: 1fr;
+    grid-template-rows: 52vh auto;
+    height: auto;
+    min-height: 100vh;
   }
 
-  .profile-image {
-    width: 300px;
-    height: 300px;
-    margin: 0 40px 0 0; /* Reset the auto margins and only add right margin */
+  .photo-panel { height: 52vh; }
+
+  .content-panel {
+    padding: 2.5rem 1.5rem 5rem;
   }
 
-  .profile-content {
-    text-align: left;
-  }
+  .headline { font-size: clamp(3.8rem, 16vw, 5.5rem); }
+  .headline-rule { display: none; }
+  .page-number { bottom: 1rem; right: 1.25rem; }
+  .cta-row { flex-wrap: wrap; gap: 1rem; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content-panel { padding: 0 2.5rem 0 2rem; }
+  .headline { font-size: clamp(4rem, 7vw, 6.5rem); }
 }
