@@ -102,7 +102,7 @@ const experiences = [
             title: 'Career progression',
             subtitle: 'Recognition and impact',
             bullets: [
-              <>Received a <strong>Full-time Offer</strong> for outstanding performance during the internship.</>,
+              <>Received a <strong>Full-time Offer</strong> for good performance during the internship.</>,
             ],
           },
         ],
@@ -123,7 +123,7 @@ const experiences = [
       <>Engineered a <strong>RAG application</strong> with LangChain powering chatbots for Envigo and Hertz — dynamic, context-aware responses with <strong>30% reduced response time</strong>.</>,
       <>Architected <strong>FastAPI APIs</strong> for LLM data handling, integrated MongoDB, and built an <strong>SMTP email feature</strong> with AWS S3 Email Service.</>,
       <>Developed an <strong>AI-driven sentiment analysis system</strong> using GPT-4o for accurate media classification and content moderation.</>,
-      <>Received a <strong>Full-time Offer</strong> for outstanding performance during the internship.</>,
+      <>Received a <strong>Full-time Offer</strong> for good performance during the internship.</>,
     ],
   },
   {
