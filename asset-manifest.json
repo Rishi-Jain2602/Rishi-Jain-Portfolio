@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/css/main.596d0a7b.css",
-    "main.js": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/main.7cf23e32.js",
-    "static/js/453.1407b060.chunk.js": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js",
-    "index.html": "/Rishi-Jain2602/Rishi-Jain-Portfolio/index.html",
-    "main.596d0a7b.css.map": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/css/main.596d0a7b.css.map",
-    "main.7cf23e32.js.map": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/main.7cf23e32.js.map",
-    "453.1407b060.chunk.js.map": "/Rishi-Jain2602/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/Rishi-Jain-Portfolio/static/css/main.8ffab461.css",
+    "main.js": "/Rishi-Jain-Portfolio/static/js/main.eb726087.js",
+    "static/js/453.1407b060.chunk.js": "/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/AI Img Analysis pipeline.webp": "/Rishi-Jain-Portfolio/static/media/AI Img Analysis pipeline.e1d3606d89fdfe3f5e83.webp",
+    "static/media/LinkedIn review systemGen AI.webp": "/Rishi-Jain-Portfolio/static/media/LinkedIn review systemGen AI.c8c70118d677a7fb6014.webp",
+    "static/media/AskSmart.webp": "/Rishi-Jain-Portfolio/static/media/AskSmart.9bcf3372898ad41591df.webp",
+    "static/media/Rishi Jain.jpeg": "/Rishi-Jain-Portfolio/static/media/Rishi Jain.06820012ef54fabdbd95.jpeg",
+    "static/media/wordle game.JPG": "/Rishi-Jain-Portfolio/static/media/wordle game.76139f926abd3d5f2c62.JPG",
+    "static/media/ConvAI.JPG": "/Rishi-Jain-Portfolio/static/media/ConvAI.d53e1af8a225f7e8811a.JPG",
+    "static/media/NeetPrep.jpg": "/Rishi-Jain-Portfolio/static/media/NeetPrep.493486a044fd2e657d9c.jpg",
+    "index.html": "/Rishi-Jain-Portfolio/index.html",
+    "main.8ffab461.css.map": "/Rishi-Jain-Portfolio/static/css/main.8ffab461.css.map",
+    "main.eb726087.js.map": "/Rishi-Jain-Portfolio/static/js/main.eb726087.js.map",
+    "453.1407b060.chunk.js.map": "/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.596d0a7b.css",
-    "static/js/main.7cf23e32.js"
+    "static/css/main.8ffab461.css",
+    "static/js/main.eb726087.js"
   ]
 }
