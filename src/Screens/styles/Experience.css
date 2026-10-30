@@ -183,6 +183,29 @@
 
 .exp-meta { flex: 1; }
 
+.exp-company-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.exp-company-period,
+.exp-location,
+.exp-employment-type {
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+}
+
+.exp-company-period { font-size: 0.88rem; }
+
+.exp-location {
+  font-size: 0.82rem;
+  margin-top: 0.2rem;
+}
+
 .exp-role {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.15rem;
@@ -222,6 +245,114 @@
   border-radius: 2px;
   vertical-align: middle;
   animation: pulseDot 2s ease-in-out infinite;
+}
+
+/* Grouped roles for a single company, similar to LinkedIn's experience view. */
+.exp-role-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  margin-top: 0.4rem;
+}
+
+.exp-role-item {
+  display: flex;
+  gap: 1.1rem;
+  position: relative;
+}
+
+.exp-role-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 17px;
+  bottom: -1.7rem;
+  width: 2px;
+  background: rgba(255,255,255,0.1);
+}
+
+.exp-role-marker {
+  width: 12px;
+  height: 12px;
+  margin-top: 0.35rem;
+  flex: 0 0 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  z-index: 1;
+}
+
+.exp-role-marker.current {
+  background: #00ffcc;
+  box-shadow: 0 0 12px rgba(0,255,204,0.5);
+}
+
+.exp-role-content { flex: 1; min-width: 0; }
+
+.exp-employment-type {
+  font-size: 0.88rem;
+  margin-bottom: 0.25rem;
+}
+
+.exp-role-content .exp-bullets { margin-top: 1.25rem; }
+
+/* ── Project / responsibility groups ───────────────────────── */
+.exp-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin: 1.35rem 0 1.5rem;
+}
+
+.exp-group {
+  position: relative;
+  padding: 0.95rem 1rem 0.1rem;
+  border-left: 2px solid rgba(0,255,204,0.35);
+  background: rgba(255,255,255,0.018);
+  border-radius: 0 3px 3px 0;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.exp-group:hover {
+  border-color: rgba(0,255,204,0.75);
+  background: rgba(0,255,204,0.035);
+}
+
+.exp-group-title {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+.exp-group-subtitle {
+  margin: 0.25rem 0 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #00ffcc;
+}
+
+.exp-group-description {
+  margin: 0.7rem 0 0;
+  max-width: 72ch;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.62);
+  font-weight: 300;
+}
+
+.exp-group .exp-bullets {
+  margin: 0.85rem 0 0.75rem;
+}
+
+.exp-group .exp-bullets li {
+  font-size: 0.86rem;
 }
 
 /* ── Bullet list ─────────────────────────────────────────────── */
@@ -323,4 +454,13 @@
   .exp-entry { gap: 1.25rem; }
 
   .exp-heading { font-size: clamp(3rem, 14vw, 4.5rem); }
+
+  .exp-card { padding: 1.35rem; }
+
+  .exp-groups { gap: 1rem; }
+
+  .exp-group { padding: 0.85rem 0.8rem 0.05rem; }
+
+  .exp-group-title { font-size: 0.95rem; }
+
 }
