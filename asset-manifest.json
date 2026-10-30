@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Rishi-Jain-Portfolio/static/css/main.8ffab461.css",
-    "main.js": "/Rishi-Jain-Portfolio/static/js/main.eb726087.js",
+    "main.js": "/Rishi-Jain-Portfolio/static/js/main.7269d4d4.js",
     "static/js/453.1407b060.chunk.js": "/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js",
     "static/media/AI Img Analysis pipeline.webp": "/Rishi-Jain-Portfolio/static/media/AI Img Analysis pipeline.e1d3606d89fdfe3f5e83.webp",
     "static/media/LinkedIn review systemGen AI.webp": "/Rishi-Jain-Portfolio/static/media/LinkedIn review systemGen AI.c8c70118d677a7fb6014.webp",
@@ -12,11 +12,11 @@
     "static/media/NeetPrep.jpg": "/Rishi-Jain-Portfolio/static/media/NeetPrep.493486a044fd2e657d9c.jpg",
     "index.html": "/Rishi-Jain-Portfolio/index.html",
     "main.8ffab461.css.map": "/Rishi-Jain-Portfolio/static/css/main.8ffab461.css.map",
-    "main.eb726087.js.map": "/Rishi-Jain-Portfolio/static/js/main.eb726087.js.map",
+    "main.7269d4d4.js.map": "/Rishi-Jain-Portfolio/static/js/main.7269d4d4.js.map",
     "453.1407b060.chunk.js.map": "/Rishi-Jain-Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8ffab461.css",
-    "static/js/main.eb726087.js"
+    "static/js/main.7269d4d4.js"
   ]
 }
